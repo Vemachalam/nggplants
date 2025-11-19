@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+// @import 'primeicons/primeicons.css';
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@import "./assets/scss/main.scss";
+
+:root {
+    --primary-teal: #14b8a6;
+    --primary-orange: #f97316;
+    --primary-coral: #ef4444;
+    --primary-purple: #8b5cf6;
+    --primary-yellow: #eab308;
+    --sidebar-bg: #6366f1;
+    --sidebar-hover: #4f46e5;
+
+    /* Professional blue/teal color palette */
+    --primary: #0a2540; /* Deep blue for headers/sidebar */
+    --secondary: #2e5eaa; /* Lighter blue for highlights */
+    --accent: #19b6b1; /* Soft teal for CTAs */
+    --background: #f5f7fa; /* Light background */
+    --surface: #ffffff; /* Cards/panels */
+    --text: #212b36; /* Main text */
+    --text-light: #7a869a; /* Muted */
+    --border: #e5e7eb; /* Divider */
+    --danger: #d7263d; /* Alerts */
+    --success: #22bb33; /* Success alerts */
+}
+
