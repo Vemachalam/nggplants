@@ -4,15 +4,20 @@ import { HomeComponent } from './landing/home.component/home.component';
 import { OverviewComponent } from './landing/overview.component/overview.component';
 import { AboutComponent } from './landing/about.component/about.component';
 import { FaqnggComponent } from './landing/faqngg.component/faqngg.component';
+import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
 
 const routes: Routes = [
   {
-    path: 'fetch',
+    path: '',
     component: HomeComponent,
     children: [
      
       { path: 'about', component: AboutComponent },
-     
+
+       { path: 'nggsupport', component: SupportnggComponent },
+
+               
+   
     ],
   },
   { path: '**', redirectTo: '' },
