@@ -5,6 +5,7 @@ import { OverviewComponent } from './landing/overview.component/overview.compone
 import { AboutComponent } from './landing/about.component/about.component';
 import { FaqnggComponent } from './landing/faqngg.component/faqngg.component';
 import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
+import { TermsConditionsComponent } from './landing/terms-conditions.component/terms-conditions.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent },
 
        { path: 'nggsupport', component: SupportnggComponent },
-
+{ path: 'terms-conditions', component: TermsConditionsComponent },
                
    
     ],
