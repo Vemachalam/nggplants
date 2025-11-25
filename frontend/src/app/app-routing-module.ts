@@ -4,14 +4,16 @@ import { HomeComponent } from './landing/home.component/home.component';
 import { OverviewComponent } from './landing/overview.component/overview.component';
 import { AboutComponent } from './landing/about.component/about.component';
 import { FaqnggComponent } from './landing/faqngg.component/faqngg.component';
+import { TermsConditionsComponent } from './landing/terms-conditions.component/terms-conditions.component';
 
 const routes: Routes = [
   {
-    path: 'fetch',
+    path: '',
     component: HomeComponent,
     children: [
      
       { path: 'about', component: AboutComponent },
+      { path: 'Terms-Conditions', component: TermsConditionsComponent}
      
     ],
   },
