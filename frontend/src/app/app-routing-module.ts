@@ -3,9 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './landing/home.component/home.component';
 import { OverviewComponent } from './landing/overview.component/overview.component';
 import { AboutComponent } from './landing/about.component/about.component';
-import { FaqnggComponent } from './landing/faqngg.component/faqngg.component';
 import { TermsConditionsComponent } from './landing/terms-conditions.component/terms-conditions.component';
-
+import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
 const routes: Routes = [
   {
     path: '',
@@ -14,8 +13,8 @@ const routes: Routes = [
      
       { path: 'about', component: AboutComponent },
       { path: 'overview', component: OverviewComponent },
-      { path: 'Terms-Conditions', component: TermsConditionsComponent}
-     
+      { path: 'Terms-Conditions', component: TermsConditionsComponent},
+      { path: 'nggsupport', component: SupportnggComponent },
     ],
   },
   { path: '**', redirectTo: '' },
