@@ -2,6 +2,7 @@
      01.COMMON CSS 
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 :root {
     --font-dmsans: "DM Sans", sans-serif;
     --font-playfair: "Playfair Display", sans-serif;
@@ -3235,21 +3236,21 @@ header.style-1 .main-menu > ul {
 header.style-1 .main-menu > ul > li {
     display: inline-block;
     position: relative;
-    padding: 0 25px;
+    padding: 8 10px;
 }
 @media (min-width: 1400px) and (max-width: 1566px) {
     header.style-1 .main-menu > ul > li {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 }
 @media (max-width: 1399px) {
     header.style-1 .main-menu > ul > li {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 }
 @media (max-width: 991px) {
     header.style-1 .main-menu > ul > li {
-        padding: 0px 12px;
+        padding: 0px 10px;
     }
 }
 header.style-1 .main-menu > ul > li:hover i {
@@ -3264,7 +3265,7 @@ header.style-1 .main-menu > ul > li:hover i {
         padding-left: 0;
     }
     header.style-1 .main-menu > ul > li:last-child {
-        padding-right: 0;
+        padding-right: 5;
     }
 }
 header.style-1 .main-menu > ul > li > a {

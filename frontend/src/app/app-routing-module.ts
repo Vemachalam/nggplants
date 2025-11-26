@@ -13,6 +13,7 @@ const routes: Routes = [
     children: [
      
       { path: 'about', component: AboutComponent },
+      { path: 'overview', component: OverviewComponent },
       { path: 'Terms-Conditions', component: TermsConditionsComponent}
      
     ],
