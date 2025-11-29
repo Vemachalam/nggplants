@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="instaGradient" cx="50%" cy="50%" r="75%" fx="30%" fy="107%">
+      <stop offset="0%" stop-color="#fdf497"/>
+      <stop offset="5%" stop-color="#fdf497"/>
+      <stop offset="45%" stop-color="#fd5949"/>
+      <stop offset="60%" stop-color="#d6249f"/>
+      <stop offset="90%" stop-color="#285AEB"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background rounded square -->
+  <rect width="512" height="512" rx="110" ry="110" fill="url(#instaGradient)"/>
+
+  <!-- white camera glyph -->
+  <path fill="#ffffff" d="M349.33 69.33H162.67C104.31 69.33 58 115.64 58 174v174c0 58.36
+  46.31 104.67 104.67 104.67h186.67C407.69 452.67 454 406.36 454 348V174c0-58.36-46.31-104.67-104.67-104.67zm68 
+  278c0 37.48-30.52 68-68 68H162.67c-37.48 0-68-30.52-68-68V174c0-37.48 30.52-68 
+  68-68h186.67c37.48 0 68 30.52 68 68v173zM256 164a92 92 0 1 0 0 184 92 92 0 
+  0 0 0-184zm0 152a60 60 0 1 1 0-120 60 60 0 0 1 0 120zm104-152a22 22 0 1 1 0 
+  44 22 22 0 0 1 0-44z"/>
+</svg>
