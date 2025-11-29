@@ -13,8 +13,9 @@ import { TermsConditionsComponent } from './landing/terms-conditions.component/t
 import { ServicesComponent } from './landing/services.component/services.component';
 import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
 import { OriginnggComponent } from './landing/originngg.component/originngg.component';
-import { FranchiseComponent } from './landing/franchise.component/franchise.component';
+import { ObjectiveComponent } from './landing/objective.component/objective.component';
 import { LatestannouncementUpdates } from './landing/latestannouncement-updates/latestannouncement-updates';
+import { FranchiseComponent } from './landing/franchise.component/franchise.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,8 @@ import { LatestannouncementUpdates } from './landing/latestannouncement-updates/
     ServicesComponent,
     SupportnggComponent,
     OriginnggComponent,
+    ObjectiveComponent,
     FranchiseComponent,
-    OriginnggComponent,
     LatestannouncementUpdates,
   ],
   imports: [
