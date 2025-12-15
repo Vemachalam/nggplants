@@ -60,7 +60,8 @@
                                 <a href="javascript:void(0)" routerLink="/overview">Overview of NGG</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" routerLink="/">Latest Announcement / Updates</a>
+                                <a href="javascript:void(0)" routerLink="/latestannouncement-updates">Latest
+                                    Announcement / Updates</a>
                             </li>
                         </ul>
                     </li>
@@ -144,6 +145,10 @@
                             <li><a href="javascript:void(0)" routerLink="/headoffice">Head Office</a></li>
                         </ul>
                     </li>
+                    <li class=" menu-item-has-children">
+                        <a href="javascript:void(0)" class="" routerLink="/">Gallary</a>
+                        <i class="bi bi-plus dropdown-icon" (click)="toggleDropdown($event, 'first')"></i>
+                    </li>
                 </ul>
             </div>
             <div class="nav-right d-flex jsutify-content-end align-items-center">
@@ -162,7 +167,14 @@
             </div>
         </div>
     </header>
+
 </div>
+<div *ngIf="isHomePage" class="modern-scroll">
+    <div class="scroll-text" routerLink="/latestannouncement-updates">
+        Latest Announcement & Updates : Click here to view official Updates and Announcements
+    </div>
+</div>
+
 <!-- End header Section-->
 
 <!-- main Body starts-->
