@@ -1,7 +1,8 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { NgxSpinnerModule } from "ngx-spinner";
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { HomeComponent } from './landing/home.component/home.component';
@@ -12,6 +13,7 @@ import { TermsConditionsComponent } from './landing/terms-conditions.component/t
 import { ServicesComponent } from './landing/services.component/services.component';
 import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
 import { OriginnggComponent } from './landing/originngg.component/originngg.component';
+import { FranchiseComponent } from './landing/franchise.component/franchise.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,16 @@ import { OriginnggComponent } from './landing/originngg.component/originngg.comp
     TermsConditionsComponent,
     ServicesComponent,
     SupportnggComponent,
-    OriginnggComponent
+    OriginnggComponent,
+    FranchiseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxSpinnerModule   
+    NgxSpinnerModule ,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule, 
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

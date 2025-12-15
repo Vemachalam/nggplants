@@ -1,5 +1,12 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, ElementRef, Inject, PLATFORM_ID, Renderer2, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Inject,
+  PLATFORM_ID,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
 
 @Component({
   selector: 'app-home.component',
@@ -11,6 +18,7 @@ export class HomeComponent {
 
   @ViewChild('preloader') preloader!: ElementRef;
   @ViewChild('sidebarBtn') sidebarBtn!: ElementRef;
+
   sMenuVisible = false;
   ShowTendersPopup = false;
   isSidebarButtonActive = false;
@@ -18,22 +26,39 @@ export class HomeComponent {
   isSidebarActive = false;
   isBrowser = false;
 
-  constructor(private renderer: Renderer2,
+  constructor(
+    private renderer: Renderer2,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {this.isBrowser = isPlatformBrowser(this.platformId);}
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
-  //fontsize
   ngOnInit() {
-    this.setFontSize('medium'); 
-  }
+    this.setFontSize('medium');
+ if (this.isBrowser) {
+      const dot = document.getElementById('cursor-dot') as HTMLElement | null;
+      const plant = document.getElementById('cursor-plant') as HTMLElement | null;
 
+     if (!dot || !plant) return;
+      let plantX = 0;
+      let plantY = 0;
+document.addEventListener('mousemove', (e: MouseEvent) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        dot.style.transform = `translate(${x}px, ${y}px)`;
+
+        plantX += (x - plantX) * 0.15;
+        plantY += (y - plantY) * 0.15;
+
+        plant.style.transform = `translate(${plantX}px, ${plantY}px)`;
+      });
+    }
+  }
   ngAfterViewInit(): void {
-  if (isPlatformBrowser(this.platformId)) {
-     this.setFontSize('medium');
+    if (isPlatformBrowser(this.platformId)) {
+      this.setFontSize('medium');
+    }
   }
-}
-
-
   toggleSidebarButton(): void {
     this.isSidebarButtonActive = !this.isSidebarButtonActive;
     this.isMenuVisible = !this.isMenuVisible;
@@ -45,50 +70,44 @@ export class HomeComponent {
 
   setFontSize(size: 'small' | 'medium' | 'large') {
     if (!this.isBrowser) return;
+
     const body = document.body;
 
-    // Remove any previous font size classes
     this.renderer.removeClass(body, 'font-small');
     this.renderer.removeClass(body, 'font-medium');
     this.renderer.removeClass(body, 'font-large');
 
-    // Add new class
     this.renderer.addClass(body, `font-${size}`);
   }
-
   toggleDropdown(event: MouseEvent, type: 'first' | 'second'): void {
-    const clicked = event.currentTarget as HTMLElement;
+  const clicked = event.currentTarget as HTMLElement;
 
-    const activeClass = 'active';
-    const targetList = type === 'first' ? 'ul' : '.submenu-list';
-    const siblings = clicked.parentElement?.parentElement?.children;
-
-    // Toggle current
-    clicked.classList.toggle(activeClass);
-
-    const next = clicked.nextElementSibling as HTMLElement;
-    if (next && next.matches(targetList)) {
-      next.style.display = next.style.display === 'block' ? 'none' : 'block';
-    }
-
-    // Close siblings
-    if (siblings) {
-      Array.from(siblings).forEach((sibling) => {
-        if (sibling !== clicked.parentElement) {
-          const sibDropdown = sibling.querySelector<HTMLElement>(targetList);
-          const sibIcon = sibling.querySelector<HTMLElement>('.' + activeClass);
-          if (sibDropdown) sibDropdown.style.display = 'none';
-          if (sibIcon) sibIcon.classList.remove(activeClass);
-        }
-      });
-    }
+  const activeClass = 'active';
+  const targetList = type === 'first' ? 'ul' : '.submenu-list';
+  const siblings = clicked.parentElement?.parentElement?.children;
+  clicked.classList.toggle(activeClass);
+ const next = clicked.nextElementSibling as HTMLElement;
+  if (next && next.matches(targetList)) {
+    next.style.display = next.style.display === 'block' ? 'none' : 'block';
   }
 
-  // Buttons
+  if (siblings) {
+    Array.from(siblings).forEach((sibling) => {
+      if (sibling !== clicked.parentElement) {
+        const sibDropdown = sibling.querySelector<HTMLElement>(targetList);
+        const sibIcon = sibling.querySelector<HTMLElement>('.' + activeClass);
 
+        if (sibDropdown) sibDropdown.style.display = 'none';
+        if (sibIcon) sibIcon.classList.remove(activeClass);
+     }
+});
+}
+}
+ 
   onMouseEnter(event: MouseEvent, spanEl: HTMLElement): void {
     const target = event.currentTarget as HTMLElement;
     const offset = target.getBoundingClientRect();
+
     const relX = event.pageX - offset.left - window.scrollX;
     const relY = event.pageY - offset.top - window.scrollY;
 
@@ -99,6 +118,7 @@ export class HomeComponent {
   onMouseLeave(event: MouseEvent, spanEl: HTMLElement): void {
     const target = event.currentTarget as HTMLElement;
     const offset = target.getBoundingClientRect();
+
     const relX = event.pageX - offset.left - window.scrollX;
     const relY = event.pageY - offset.top - window.scrollY;
 
@@ -106,14 +126,11 @@ export class HomeComponent {
     spanEl.style.left = `${relX}px`;
   }
 
-  //scroll
   scrollToMain() {
     const main = document.getElementById('main-content');
     if (main) {
-      main.focus(); // For accessibility
-      main.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+      main.focus();
+      main.scrollIntoView({ behavior: 'smooth' });
 }
-
-
+}
+}
