@@ -5,6 +5,7 @@ import { OverviewComponent } from './landing/overview.component/overview.compone
 import { AboutComponent } from './landing/about.component/about.component';
 import { TermsConditionsComponent } from './landing/terms-conditions.component/terms-conditions.component';
 import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
+import { FranchiseComponent } from './landing/franchise.component/franchise.component';
 const routes: Routes = [
   {
     path: '',
@@ -15,7 +16,8 @@ const routes: Routes = [
       { path: 'overview', component: OverviewComponent },
       { path: 'Terms-Conditions', component: TermsConditionsComponent},
       { path: 'nggsupport', component: SupportnggComponent },
-    ],
+      { path: 'Franchise', component: FranchiseComponent },
+  ],
   },
   { path: '**', redirectTo: '' },
 ];

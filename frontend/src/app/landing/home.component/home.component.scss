@@ -49,3 +49,36 @@ iframe{
 .highlight-link:hover{
     color: green ;
 }
+
+body {
+  cursor: none !important;
+}
+
+#cursor-dot {
+  width: 10px;
+  height: 10px;
+  background: #4CAF50;      
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+#cursor-plant {
+  width: 20px;                                 
+  height: 20px;
+  background-image: url('/assets/landing/img/home1/icon/sprout (1).svg');
+  background-size: contain;                    
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: transparent;
+}
+
