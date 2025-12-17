@@ -1,0 +1,51 @@
+<div class="breadcrumb-section seven" style="background-image: url(/assets/landing/img/inner-pages/breadcrumb-bg7.png)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="banner-content">
+                    <h1>Latest Announcements And Updates of NGG Plants</h1>
+                    <ul class="breadcrumb-list">
+                        <li><a href="javascript:void(0)" routerLink="/">Home</a></li>
+                        <li>Updates of NGG Plants</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home7-faq-section p mb110">
+    <div class="announcement-box">
+        <div class="header">
+            <span class="title">Announcements And Updates</span>
+            <div class="header-arrows">
+                <button class="arrow-btn1" (click)="scrollUp()">⌵</button>
+                <button class="arrow-btn" (click)="scrollDown()">⌵</button>
+            </div>
+        </div>
+        <div #scrollArea class="scroll-area">
+            <div class="item" *ngFor="let a of announcements; let i=index">
+                <div class="row1">
+                    <div class="date">
+                        <div class="day">{{ a.day }} {{ a.month }}</div>
+                        <div class="year">{{ a.year }}</div>
+                    </div>
+                    <div class="text">
+                        <a href="javascript:void(0)" (click)="toggleContent(i)">
+                            {{ openIndex === i ? a.text : (a.text | slice:0:150) + '.....'}}
+                        </a>
+                    </div>
+                </div>
+                <div *ngIf="openIndex === i" class="extra-contant">
+                    <img *ngIf="a.image && !a.images" [src]="a.image" class="content-image" alt="img" />
+                    <div *ngIf="a.images?.length" class="image-list">
+                        <img *ngFor="let img of a.images" [src]="img" class="content-image" alt="img">
+                    </div>
+                    <a *ngIf="a.pdf" [href]="a.pdf" target="_blank" rel="noopener" class="pdf-link">
+                        📄 View PDF
+                    </a>
+                    <div *ngIf="a.content" class="content-box" [innerHTML]="a.content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

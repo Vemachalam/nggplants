@@ -78,7 +78,28 @@ body {
   left: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index:ï¿½9999;
   background-color: transparent;
 }
-
+.modern-scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #305f1c;
+  padding: 8px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 25s linear infinite;
+  caret-color: transparent;
+}
+.scroll-text:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}

@@ -1963,6 +1963,31 @@ video {
     .header-topbar-area {
         padding: 0 30px;
     }
+      header.style-1 .nav-right {
+        gap: 10px !important;
+    }
+    header.style-1 .main-menu>ul>li {
+        padding: 0 19px !important;
+    }
+header.style-1 .main-menu>ul>li>a {
+        padding: 22px 0;
+        font-size: 13px !important;
+    }
+.liveauctions .card h2 {
+    color: #fff;
+    font-size: 0.9rem !important;
+}
+.liveauctions .card p {
+    color: #fff;
+    font-size: 14px !important;
+}
+    .col-sm-3 {
+        flex: 0 0 auto;
+        width: 25% !important;
+    }
+    .liveauctions .card img {
+        height: 59px !important;
+    }
 }
 @media (max-width: 991px) {
     .header-topbar-area {
@@ -3499,7 +3524,7 @@ header.style-1 .main-menu > ul > li.menu-item-has-children::after {
     font-weight: 600;
     position: absolute;
     top: 28px;
-    right: 6px;
+    right: -2px;
     font-size: 12px;
     color: var(--title-color);
     transition: all 0.55s ease-in-out;
@@ -5143,7 +5168,7 @@ header.style-3 .nav-right .mobile-menu-btn {
 @media (max-width: 991px) {
     header.style-3 .nav-right .mobile-menu-btn {
         display: flex;
-        margin-left: 50px;
+        margin-left: 60px;
         flex-direction: column;
         align-items: end;
         visibility: visible;
@@ -5824,7 +5849,7 @@ header.style-3 .search-bar .search-input .search-group .form-inner2 button svg {
     }
     header.style-3 .main-menu > ul > li ul.sub-menu > li a:hover {
         color: var(--primary-color);
-        margin-left: 10px;
+        margin-left: 15px;
     }
     header.style-3 .main-menu > ul > li ul.sub-menu > li a.active {
         color: var(--primary-color);
@@ -6728,7 +6753,7 @@ header.style-4 .search-bar .search-input .search-group .form-inner2 button svg {
         padding: 12px 0px;
     }
     header.style-4 .main-menu > ul > li ul.sub-menu > li a:hover {
-        margin-left: 10px;
+        margin-left: 15px;
     }
     header.style-4 .main-menu > ul > li ul.sub-menu > li a.active {
         color: var(--primary-color);

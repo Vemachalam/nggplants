@@ -14,6 +14,7 @@ import { ServicesComponent } from './landing/services.component/services.compone
 import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
 import { OriginnggComponent } from './landing/originngg.component/originngg.component';
 import { FranchiseComponent } from './landing/franchise.component/franchise.component';
+import { LatestannouncementUpdates } from './landing/latestannouncement-updates/latestannouncement-updates';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { FranchiseComponent } from './landing/franchise.component/franchise.comp
     ServicesComponent,
     SupportnggComponent,
     OriginnggComponent,
-    FranchiseComponent
+    FranchiseComponent,
+    OriginnggComponent,
+    LatestannouncementUpdates,
   ],
   imports: [
     BrowserModule,
