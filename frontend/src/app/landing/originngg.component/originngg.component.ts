@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './originngg.component.scss',
 })
 export class OriginnggComponent {
-
 }
