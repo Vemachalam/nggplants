@@ -1,0 +1,59 @@
+.accordion-button::after {
+    position: absolute !important;
+    right: 1.2rem !important; 
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 1.8em;
+    height: 1.8em;
+    background-image: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0, 128, 0, 0.10);
+    font-weight: 700;
+    font-size: 18px;
+    content: "+"; 
+}
+.accordion-button.collapsed::after { content: "+"; }
+.accordion-button:not(.collapsed)::after { content: "−"; } 
+.accordion-button {
+    position: relative !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding-right: 3.5rem !important;
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+}
+.accordion-collapse.collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+.accordion-collapse.collapse.show {
+    max-height: 1200px;
+}
+.accordion-item.active .accordion-collapse {
+    max-height: 1200px;
+}
+.accordion-collapse.collapse .accordion-body {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.accordion-item {
+    margin: 35px !important;
+    padding: 3px!important;
+    border: 3px solid black;
+    border-bottom: 1px solid #131111;
+}
+.accordion-button:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+.accordion-body {
+    color: #444;
+    font-size: 0.96rem;
+    line-height: 1.55;
+}
