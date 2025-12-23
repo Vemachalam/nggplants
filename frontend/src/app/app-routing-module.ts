@@ -3,29 +3,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './landing/home.component/home.component';
 import { OverviewComponent } from './landing/overview.component/overview.component';
 import { AboutComponent } from './landing/about.component/about.component';
-import { TermsConditionsComponent } from './landing/terms-conditions.component/terms-conditions.component';
-import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
 import { FaqnggComponent } from './landing/faqngg.component/faqngg.component';
-import { ObjectiveComponent } from './landing/objective.component/objective.component';
-import { FranchiseComponent } from './landing/franchise.component/franchise.component';
-import { LatestannouncementUpdates } from './landing/latestannouncement-updates/latestannouncement-updates';
-import { OriginnggComponent } from './landing/originngg.component/originngg.component';
+import { TermsConditionsComponent } from './landing/terms-conditions.component/terms-conditions.component';
+import { ManagementComponent } from './landing/management.component/management.component';
 import { PlantCatagoryComponent } from './features/plant-catagory.component/plant-catagory.component';
+
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     children: [
+     
       { path: 'about', component: AboutComponent },
       { path: 'overview', component: OverviewComponent },
       { path: 'Terms-Conditions', component: TermsConditionsComponent},
-      { path: 'nggsupport', component: SupportnggComponent },
-      { path: 'faqngg', component: FaqnggComponent },
-      { path: 'Objective', component:ObjectiveComponent },
-      { path: 'Franchise', component: FranchiseComponent },
-      { path: 'latestannouncement-updates', component: LatestannouncementUpdates},
-       { path: 'origin-ngg', component: OriginnggComponent},
-        { path: '', component: PlantCatagoryComponent}
+      { path: 'management', component: ManagementComponent},
+      { path: '', component: PlantCatagoryComponent}
+
+     
     ],
   },
   { path: '**', redirectTo: '' },
