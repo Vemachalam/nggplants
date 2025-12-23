@@ -7,6 +7,8 @@ import { TermsConditionsComponent } from './landing/terms-conditions.component/t
 import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
 import { FranchiseComponent } from './landing/franchise.component/franchise.component';
 import { LatestannouncementUpdates } from './landing/latestannouncement-updates/latestannouncement-updates';
+import { OriginnggComponent } from './landing/originngg.component/originngg.component';
+import { PlantCatagoryComponent } from './features/plant-catagory.component/plant-catagory.component';
 const routes: Routes = [
   {
     path: '',
@@ -17,7 +19,9 @@ const routes: Routes = [
       { path: 'Terms-Conditions', component: TermsConditionsComponent},
       { path: 'nggsupport', component: SupportnggComponent },
       { path: 'Franchise', component: FranchiseComponent },
-      { path: 'latestannouncement-updates', component: LatestannouncementUpdates}
+      { path: 'latestannouncement-updates', component: LatestannouncementUpdates},
+       { path: 'origin-ngg', component: OriginnggComponent},
+        { path: '', component: PlantCatagoryComponent}
     ],
   },
   { path: '**', redirectTo: '' },

@@ -1,18 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { OriginnggComponent } from './originngg.component';
+import { PlantCatagoryComponent } from './plant-catagory.component';
 
-describe('OriginnggComponent', () => {
-  let component: OriginnggComponent;
-  let fixture: ComponentFixture<OriginnggComponent>;
+describe('PlantCatagoryComponent', () => {
+  let component: PlantCatagoryComponent;
+  let fixture: ComponentFixture<PlantCatagoryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OriginnggComponent],
+      declarations: [PlantCatagoryComponent],
     }).compileComponents();
-    fixture = TestBed.createComponent(OriginnggComponent);
+
+    fixture = TestBed.createComponent(PlantCatagoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
