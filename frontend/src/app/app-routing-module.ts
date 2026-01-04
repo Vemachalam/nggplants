@@ -7,6 +7,7 @@ import { FaqnggComponent } from './landing/faqngg.component/faqngg.component';
 import { TermsConditionsComponent } from './landing/terms-conditions.component/terms-conditions.component';
 import { ManagementComponent } from './landing/management.component/management.component';
 import { PlantCatagoryComponent } from './features/plant-catagory.component/plant-catagory.component';
+import { DroplistComponent } from './landing/droplist.component/droplist.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,9 @@ const routes: Routes = [
       { path: 'overview', component: OverviewComponent },
       { path: 'Terms-Conditions', component: TermsConditionsComponent},
       { path: 'management', component: ManagementComponent},
-      { path: '', component: PlantCatagoryComponent}
+      { path: '', component: PlantCatagoryComponent},
+      { path: 'auth/register', component: DroplistComponent}
+
 
      
     ],
