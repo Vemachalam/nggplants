@@ -8,6 +8,7 @@ import { TermsConditionsComponent } from './landing/terms-conditions.component/t
 import { ManagementComponent } from './landing/management.component/management.component';
 import { PlantCatagoryComponent } from './features/plant-catagory.component/plant-catagory.component';
 import { DroplistComponent } from './landing/droplist.component/droplist.component';
+import { GalleryComponent } from './landing/gallery.component/gallery.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'Terms-Conditions', component: TermsConditionsComponent},
       { path: 'management', component: ManagementComponent},
       { path: '', component: PlantCatagoryComponent},
+      { path: 'gallery', component: GalleryComponent},
       { path: 'auth/register', component: DroplistComponent}
 
 

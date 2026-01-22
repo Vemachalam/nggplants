@@ -1,0 +1,20 @@
+.gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: flex-start;
+    padding-left: 90px;
+}
+.gallery-wrapper img {
+    width: auto;
+    max-width: 400px;   
+    height: 300px;
+    display: block;
+    max-height: 300px;
+    border-radius: 6px;
+     transition: transform 0.35s ease;
+}
+.gallery-wrapper img:hover {
+    transform: scale(1.08);
+}
+

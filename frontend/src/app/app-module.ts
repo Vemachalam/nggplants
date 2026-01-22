@@ -13,6 +13,7 @@ import { ServicesComponent } from './landing/services.component/services.compone
 import { SupportnggComponent } from './landing/supportngg.component/supportngg.component';
 import { OriginnggComponent } from './landing/originngg.component/originngg.component';
 import { ManagementComponent } from './landing/management.component/management.component';
+import { GalleryComponent } from './landing/gallery.component/gallery.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ManagementComponent } from './landing/management.component/management.c
     ServicesComponent,
     SupportnggComponent,
     OriginnggComponent,
-    ManagementComponent
+    ManagementComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
