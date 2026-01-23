@@ -14,6 +14,8 @@ import { SupportnggComponent } from './landing/supportngg.component/supportngg.c
 import { OriginnggComponent } from './landing/originngg.component/originngg.component';
 import { ManagementComponent } from './landing/management.component/management.component';
 import { GalleryComponent } from './landing/gallery.component/gallery.component';
+import { FranchiseComponent } from './landing/franchise.component/franchise.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,11 +29,13 @@ import { GalleryComponent } from './landing/gallery.component/gallery.component'
     SupportnggComponent,
     OriginnggComponent,
     ManagementComponent,
-    GalleryComponent
+    GalleryComponent,
+    FranchiseComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     NgxSpinnerModule   
   ],
   providers: [
