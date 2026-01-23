@@ -9,6 +9,8 @@ import { ManagementComponent } from './landing/management.component/management.c
 import { PlantCatagoryComponent } from './features/plant-catagory.component/plant-catagory.component';
 import { DroplistComponent } from './landing/droplist.component/droplist.component';
 import { GalleryComponent } from './landing/gallery.component/gallery.component';
+import { OriginnggComponent } from './landing/originngg.component/originngg.component';
+import { FranchiseComponent } from './landing/franchise.component/franchise.component';
 
 const routes: Routes = [
   {
@@ -22,7 +24,10 @@ const routes: Routes = [
       { path: 'management', component: ManagementComponent},
       { path: '', component: PlantCatagoryComponent},
       { path: 'gallery', component: GalleryComponent},
-      { path: 'auth/register', component: DroplistComponent}
+      { path: 'droplist', component: DroplistComponent},
+      {path: 'faqngg', component: FaqnggComponent },
+      {path: 'Franchise', component: FranchiseComponent },
+      {path: 'origin-ngg', component: OriginnggComponent }
 
 
      
